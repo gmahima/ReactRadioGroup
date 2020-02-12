@@ -11,7 +11,7 @@ export default function RadioGroup(props){
     return(
         <div>
             {
-                context.anime.map((a) => {
+                context.show.map((a) => {
                     return(<label>
                         <input type="radio"
                     value={a.id}
