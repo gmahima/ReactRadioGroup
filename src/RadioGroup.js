@@ -4,7 +4,7 @@ import {RadioContext} from './context'
 export default function RadioGroup(props){
     const context = useContext(RadioContext)
     const handleOptionChange = (e) => {
-        console.log(e.target.value)
+        console.log("radio:" + e.target.value)
         context.actions.select(e.target.value)
 
     }

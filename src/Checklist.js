@@ -4,7 +4,6 @@ import {RadioContext} from './context'
 export default function Checklist(props) {
     const handleChange = (e) =>{
         console.log(e.target.value + " " + e.target.checked)
-        // context.actions.select(e.target.value)
         context.actions.handleAnimeState(e.target.value, e.target.checked)
         console.log(context.anime)
     }
@@ -19,7 +18,7 @@ export default function Checklist(props) {
                             <label>
                                 <input type="checkbox"
                                     value={a.id}
-                                    checked={a.checked}
+                                    defaultChecked={a.checked}
                                     onChange={handleChange}
                                 />
                                 {a.name}
