@@ -9,10 +9,21 @@ export default function Checklist(props) {
     }
     
     const context = useContext(RadioContext)
+    let myAnime = context.anime;
+    // if(context.selected === 'all'){
+    //     myAnime = context.anime;
+    // }
+    // else if(context.selected === 'checked'){
+    //     myAnime = context.anime.filter((a) => a.checked === true)
+    // }
+    // else {
+    //     myAnime = context.anime.filter((a) => a.checked === false)
+    // }
+    
     return(
         <div>
-            {
-                context.anime.map(
+            { 
+                props.myAni.map(
                     (a) => {
                         return(
                             <label>
@@ -22,7 +33,8 @@ export default function Checklist(props) {
                                     onChange={handleChange}
                                 />
                                 {a.name}
-                            </label>)
+                            </label>
+                        )
                     }
                 )
             }
