@@ -9,16 +9,16 @@ export default function RadioGroup(props){
         context.actions.select(e.target.value)
 
     }
-    let myAnime = context.anime;
-    if(context.selected === 'all'){
-        myAnime = context.anime;
-    }
-    else if(context.selected === 'checked'){
-        myAnime = context.anime.filter((a) => a.checked === true)
-    }
-    else {
-        myAnime = context.anime.filter((a) => a.checked === false)
-    }
+    // let myAnime = context.anime;
+    // if(context.selected === 'all'){
+    //     myAnime = context.anime;
+    // }
+    // else if(context.selected === 'checked'){
+    //     myAnime = context.anime.filter((a) => a.checked === true)
+    // }
+    // else {
+    //     myAnime = context.anime.filter((a) => a.checked === false)
+    // }
     return(
         <div>
             {
@@ -32,7 +32,7 @@ export default function RadioGroup(props){
                     )
                 })
             }
-            <Checklist myAni = {myAnime}></Checklist>
+            {/* <Checklist myAni = {myAnime}></Checklist> */}
 
         </div>
     )

@@ -9,7 +9,7 @@ function App() {
     <Provider>
     <div className="App">
       <RadioGroup></RadioGroup>
-      {/* <Checklist></Checklist> */}
+      <Checklist></Checklist>
     </div>
     </Provider>
   );

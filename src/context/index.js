@@ -1,7 +1,7 @@
 import React, {useState, createContext} from 'react'
 export const RadioContext = createContext(null);
 export function Provider(props){
-    const [show, setShow] = useState([{title: 'all', id: 'all'}, {title: 'checked', id: 'checked'}, {title: 'unchecked', id:'unchecked'}])
+    const show = [{title: 'all', id: 'all'}, {title: 'checked', id: 'checked'}, {title: 'unchecked', id:'unchecked'}]
 
     const [selected, setSelected] = useState('all')
     const handleSelection = (id) => {
@@ -12,9 +12,6 @@ export function Provider(props){
         const i = anime.findIndex(t => t.id === id);
         anime[i].checked = checked;
         setAnime(anime)
-
-
-
     }
     return(
         <RadioContext.Provider value={{

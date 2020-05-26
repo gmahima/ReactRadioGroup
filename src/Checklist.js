@@ -9,21 +9,25 @@ export default function Checklist(props) {
     }
     
     const context = useContext(RadioContext)
+    console.log(context.anime);
+
     let myAnime = context.anime;
-    // if(context.selected === 'all'){
-    //     myAnime = context.anime;
-    // }
-    // else if(context.selected === 'checked'){
-    //     myAnime = context.anime.filter((a) => a.checked === true)
-    // }
-    // else {
-    //     myAnime = context.anime.filter((a) => a.checked === false)
-    // }
-    
+    if(context.selected === 'all'){
+        myAnime = context.anime;
+    }
+    else if(context.selected === 'checked'){
+        myAnime = context.anime.filter((a) => a.checked === true)
+    }
+    else {
+        myAnime = context.anime.filter((a) => a.checked === false)
+    }
+   
+
+
     return(
         <div>
             { 
-                props.myAni.map(
+                myAnime.map(
                     (a) => {
                         return(
                             <label>
