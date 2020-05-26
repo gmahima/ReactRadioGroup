@@ -9,9 +9,13 @@ export function Provider(props){
     }
     const [anime,setAnime] = useState([{name: 'snk', id: '0snk', checked:false}, {name: 'gekkan shoujo nozaki kun', id:'gsnk', checked:false}, {name: 'wotakoi', id:'wotakoi3', checked:false}])
     const handleAnimeState = (id, checked) => {
-        const i = anime.findIndex(t => t.id === id);
-        anime[i].checked = checked;
-        setAnime(anime)
+        const n = anime.slice();
+        for (let o of n) {
+            if(o.id === id) {
+                o.checked = checked;
+                setAnime(n);
+            }
+        }
     }
     return(
         <RadioContext.Provider value={{

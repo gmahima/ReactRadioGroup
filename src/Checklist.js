@@ -35,6 +35,7 @@ export default function Checklist(props) {
                                     value={a.id}
                                     defaultChecked={a.checked}
                                     onChange={handleChange}
+                                    checked={a.checked}
                                 />
                                 {a.name}
                             </label>
